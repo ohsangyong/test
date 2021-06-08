@@ -8,10 +8,30 @@
     <style>
         .box-1{background: linear-gradient(90deg, blue, yellow 50%, red); width: 200px; height: 100px;}
         .box-2{ width: 300px; height: 100px; border: 1px solid black;}
+        .menu{}
+        .menu ul{ list-style: none; padding: 0; margin: 0;overflow: hidden;}
+        .menu ul li{float: left; width:100px; height: 35px; line-height: 35px; text-align: center; border: solid 1px gray; margin: 0 5px 0 0;}
+        .menu ul li:hover,.menu ul li:active { background: yellow;}
+        .menu ul li:nth-child(2n+1) { background-color: tomato;}
+        .menu ul li.new::after{ content: "new"; font-size: x-small; color: white; background-color: red;padding:0 5px;}
+        .box-3{clear:left; width: 500px; height: 30px; border: solid 1px green; margin-top:10px;}
+
     </style>
 </head>
 <body>
     <div class="box-1"></div>
     <div class="box-2"></div>
+    <div class="menu">
+        <ul>
+            <li>menu1</li>
+            <li  class="new">menu2</li>
+            <li>menu3</li>
+            <li>menu4</li>
+        </ul>
+    </div>
+    <div class="box-3">
+        <label for="name"><input type="text" id="name" name="" placeholder="이름" autofocus></label>
+        <input type="text" required placeholder="전화번호입력">
+    </div>
 </body>
 </html>
